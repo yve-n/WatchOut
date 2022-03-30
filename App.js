@@ -3,6 +3,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home';
+import MoviesList from './screens/MoviesList';
 
 
 const {Navigator, Screen }= createStackNavigator();
@@ -20,6 +21,13 @@ export default function App() {
             fontSize:30,
           }
           }}/>
+        <Screen name="MoviesList" component={MoviesList}
+        options={{
+          title:"Movies",
+          headerStyle:{
+            backgroundColor: "#34495e",
+          },
+        }} />
       </Navigator>
     </NavigationContainer>
     
