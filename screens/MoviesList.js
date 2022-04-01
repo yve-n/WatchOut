@@ -3,8 +3,12 @@ import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const MoviesList = () =>{
+
+    const[movies, setMovies] = useState([]);
+    const[loading, setLoading] = useState(true);
     return(
         <View style={styles.container}>
             <Text style={styles.title}>
